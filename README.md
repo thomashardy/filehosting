@@ -8,7 +8,7 @@ I decided to fork it because, as a user of this tool, I encountered an issue aft
 
 A quick and simple edit of the script allows to fix and prevent this issue, and to have a clean and working returned link (example: `https://domain.com/files/filename.jpg`).
 
-This fork contains the fix, see [commit c9bbc08
+This fork includes the fix, see [commit c9bbc08
 ](https://github.com/thomashardy/filehosting/commit/c9bbc084f00fb72c635e503aa6a122fbebd23b1b#diff-33a35ae4a5af682c7a5d1508ce179a43) for more information.
 
 Here is a copy of the original description:
