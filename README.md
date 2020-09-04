@@ -4,7 +4,13 @@ A simple, minimalist, personal file/image hosting script
 
 This is a fork of [*filehosting*](https://sebsauvage.net/wiki/doku.php?id=php:filehosting), a tool originally developed by [Sebsauvage](https://github.com/sebsauvage).
 
-Here is a copy of the description:
+I decided to fork it because, as a user of this tool, I encountered an issue after enabling HTTPS on my server: the port *:443* was added in the returned link, after uploading a file, which broke the link. E.g. `https://domain.com:443/files/filename.jpg`
+A quick and simple edit of the script allows to fix and prevent this issue, and to have a clean and working returned link. E.g. `https://domain.com/files/filename.jpg`
+
+This fork contains the fix, see [commit c9bbc08
+](https://github.com/thomashardy/filehosting/commit/c9bbc084f00fb72c635e503aa6a122fbebd23b1b#diff-33a35ae4a5af682c7a5d1508ce179a43) for more information.
+
+Here is a copy of the original description:
 
 > ### Presentation
 > I'm tired of image hosting services. Sites like imageshack.us are riddled with advertising. Sites like *imgur.com* delete images with no warning (Yes, it has
