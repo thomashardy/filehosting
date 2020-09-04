@@ -1,6 +1,11 @@
-<html><head><style type="text/css">
-<!-- body { font-family: "Trebuchet MS",Verdana,Arial,Helvetica,sans-serif; font-size: 10pt; background-color: #eee;} -->
-</style>
+<html>
+  <head>
+  <style type="text/css">
+    body {
+      font-family: "Trebuchet MS",Verdana,Arial,Helvetica,sans-serif; font-size: 10pt; background-color: #eee;}
+  </style>
+  </head>
+<body>
 <?php 
 // A simple, minimalist, personal file/image hosting script. - version 0.5
 // Only you can upload a file or image, using the password ($PASSWORD).
@@ -29,8 +34,8 @@ if (isset($_FILES['filetoupload']) && isset($_POST['password']))
     if (file_exists($filename)) { print 'This file already exists.'; exit(); }
     if(move_uploaded_file($_FILES['filetoupload']['tmp_name'], $filename)) 
     {
-        $serverport=''; if ($_SERVER["SERVER_PORT"]!='80') { $serverport=':'.$_SERVER["SERVER_PORT"]; }
-        $fileurl='http://'.$_SERVER["SERVER_NAME"].$serverport.dirname($_SERVER["SCRIPT_NAME"]).'/'.$SUBDIR.'/'.basename($_FILES['filetoupload']['name']);
+        $serverport=''; if ($_SERVER["SERVER_PORT"]!='443') { $serverport=':'.$_SERVER["SERVER_PORT"]; }
+        $fileurl='https://'.$_SERVER["SERVER_NAME"].$serverport.dirname($_SERVER["SCRIPT_NAME"]).'/'.$SUBDIR.'/'.basename($_FILES['filetoupload']['name']);
         echo 'The file/image was uploaded to <a href="'.$fileurl.'">'.$fileurl.'</a>';
     } 
     else { echo "There was an error uploading the file, please try again !"; }
