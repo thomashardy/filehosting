@@ -31,7 +31,7 @@ Here is a copy of the original description:
 > 3. Put the file in the root of your website.
 > 4. Enjoy !
 >
-> Files will be saved in the files subdirectory. You can change the directory name in the source ($SUBDIR='files').
+> Files will be saved in the files subdirectory. You can change the directory name in the source `($SUBDIR='files')`.
 > 
 > Please note that you are limited by the php upload file size limit (see php.ini) and the maximum POST size accepted by Apache (see you apache configuration). > You can use `phpinfo()` to find this limit `(Search for post_max_size and upload_max_filesize)`.
 > 
